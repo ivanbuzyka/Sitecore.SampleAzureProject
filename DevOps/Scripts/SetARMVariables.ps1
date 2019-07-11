@@ -9,7 +9,7 @@ gci $Env:AGENT_BUILDDIRECTORY
 Write-Host "BUILD_SOURCESDIRECTORY contents:"
 gci $Env:BUILD_SOURCESDIRECTORY
 Write-Host "Current path is:"
-Get-Locatio | Write-Host
+Get-Location | Write-Host
 Write-Host "Over and out."
 
 
