@@ -1,5 +1,18 @@
 $rootDirectory = $Env:BUILD_SOURCESDIRECTORY
-Write-Host $Env:BUILD_SOURCESDIRECTORY
+
+Write-Host "Hello World from $Env:AGENT_NAME."
+Write-Host "My ID is $Env:AGENT_ID."
+Write-Host "AGENT_WORKFOLDER contents:"
+gci $Env:AGENT_WORKFOLDER
+Write-Host "AGENT_BUILDDIRECTORY contents:"
+gci $Env:AGENT_BUILDDIRECTORY
+Write-Host "BUILD_SOURCESDIRECTORY contents:"
+gci $Env:BUILD_SOURCESDIRECTORY
+Write-Host "Current path is:"
+Get-Locatio | Write-Host
+Write-Host "Over and out."
+
+
 $licenseFilePath = "$rootDirectory\DevOps\Scripts\license.xml"
 
 # Specify the certificate file path and password if you want to deploy Sitecore 9.0 XP or XDB configurations
