@@ -2,9 +2,8 @@ param([string] $DeploymentId = "ibu-xp-911",
       [string] $SubscriptinId = "575f0a7c-17d6-4c66-b207-f770cbd5bbd4")
 
 $rootPath = ".\DevOps\Scripts"
-$rootPath1 = "DevOps\Scripts"
-Write-Host "Root path is: $rootPath"
-Write-Host "Root path without dot is: $rootPath1"
+$rootPath1 = Get-Location
+Write-Host "Root path is: $rootPath1"
 # Specify the parameters for the deployment 
 $ArmTemplateUrl = "https://emeasitecore9storageblob.blob.core.windows.net/911/arm911xp/azuredeploy.json?st=2019-06-12T09%3A35%3A00Z&se=2019-07-14T09%3A35%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=6nzXZZpyKgiRlUcT1jNCR4DKkReSk9RfcsRxoU8VOxU%3D"
 $ArmParametersPath = "$rootPath\azuredeploy.parameters.json"
