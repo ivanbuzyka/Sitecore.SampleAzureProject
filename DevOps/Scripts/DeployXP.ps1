@@ -13,7 +13,7 @@ $ArmParametersPath = "$rootPath\azuredeploy.parameters.json"
 $licenseFilePath = "$rootPath\license.xml"
 
 # Specify the certificate file path and password if you want to deploy Sitecore 9.0 XP or XDB configurations
-$certificateFilePath = "$rootPath\EA1FAC1B9F10605EEA1DDC62E6A76C15E590051A.pfx" 
+$certificateFilePath = "$rootPath\EA1FAC1B9F10605EEA1DDC62E6A76C15E590051A.pfx1" 
 $certificatePassword = "secret"
 $certificateBlob = $null
 
