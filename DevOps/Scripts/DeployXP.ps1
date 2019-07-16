@@ -1,12 +1,11 @@
 param([string] $DeploymentId = "ibu-xp-911", 
       [string] $SubscriptinId = "575f0a7c-17d6-4c66-b207-f770cbd5bbd4")
 
-$rootPath = ".\DevOps\Scripts"
+$rootPath = "$Env:AGENT_RELEASEDIRECTORY\$Env:RELEASE_PRIMARYARTIFACTSOURCEALIAS"
 $rootPath1 = Get-Location
 Write-Host "Root path is: $rootPath1"
 
 Write-Host "Environment Variables: "
-Get-ChildItem $Env:AGENT_RELEASEDIRECTORY
 Get-ChildItem $Env:RELEASE_PRIMARYARTIFACTSOURCEALIAS
 
 
