@@ -6,9 +6,8 @@ $rootPath1 = Get-Location
 Write-Host "Root path is: $rootPath1"
 
 Write-Host "Environment Variables: "
-Get-ChildItem $Env:BUILD_SOURCESDIRECTORY
-
-Get-ChildItem $Env:BUILD_SOURCESDIRECTORY
+Get-ChildItem $Env:AGENT_RELEASEDIRECTORY
+Get-ChildItem $Env:RELEASE_PRIMARYARTIFACTSOURCEALIAS
 
 
 # Specify the parameters for the deployment 
