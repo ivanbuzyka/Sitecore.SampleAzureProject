@@ -1,0 +1,93 @@
+﻿{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "deploymentId": {
+      "value": ""
+    },
+    "location": {
+      "value": ""
+    },
+    "sitecoreAdminPassword": {
+      "value": "Sitecore12345"
+    },
+    "licenseXml": {
+      "value": ""
+    },
+    "repAuthenticationApiKey": {
+      "value": "67588d50667e47e0a02cb919185f7c30"
+    },
+    "sqlServerLogin": {
+      "value": "sclogin"
+    },
+    "sqlServerPassword": {
+      "value": "Sitecore12345!"
+    },
+    "siMsDeployPackageUrl": {
+      "value": "https://emeasitecore9storageblob.blob.core.windows.net/911/files/Sitecore.IdentityServer.2.0.1-r00166.scwdp.zip?st=2019-06-12T09%3A35%3A00Z&se=2019-07-14T09%3A35%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=6nzXZZpyKgiRlUcT1jNCR4DKkReSk9RfcsRxoU8VOxU%3D"
+    },
+    "cmMsDeployPackageUrl": {
+      "value": "https://emeasitecore9storageblob.blob.core.windows.net/911/files/Sitecore%209.1.1%20rev.%20002459%20(Cloud)_cm.scwdp.zip?st=2019-06-12T09%3A35%3A00Z&se=2019-07-14T09%3A35%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=6nzXZZpyKgiRlUcT1jNCR4DKkReSk9RfcsRxoU8VOxU%3D"
+    },
+    "cdMsDeployPackageUrl": {
+      "value": "https://emeasitecore9storageblob.blob.core.windows.net/911/files/Sitecore%209.1.1%20rev.%20002459%20(Cloud)_cd.scwdp.zip?st=2019-06-12T09%3A35%3A00Z&se=2019-07-14T09%3A35%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=6nzXZZpyKgiRlUcT1jNCR4DKkReSk9RfcsRxoU8VOxU%3D"
+    },
+    "prcMsDeployPackageUrl": {
+      "value": "https://emeasitecore9storageblob.blob.core.windows.net/911/files/Sitecore%209.1.1%20rev.%20002459%20(Cloud)_prc.scwdp.zip?st=2019-06-12T09%3A35%3A00Z&se=2019-07-14T09%3A35%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=6nzXZZpyKgiRlUcT1jNCR4DKkReSk9RfcsRxoU8VOxU%3D"
+    },
+    "repMsDeployPackageUrl": {
+      "value": "https://emeasitecore9storageblob.blob.core.windows.net/911/files/Sitecore%209.1.1%20rev.%20002459%20(Cloud)_rep.scwdp.zip?st=2019-06-12T09%3A35%3A00Z&se=2019-07-14T09%3A35%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=6nzXZZpyKgiRlUcT1jNCR4DKkReSk9RfcsRxoU8VOxU%3D"
+    },
+    "xcRefDataMsDeployPackageUrl": {
+      "value": "https://emeasitecore9storageblob.blob.core.windows.net/911/files/Sitecore%209.1.1%20rev.%20002459%20(Cloud)_xp1referencedata.scwdp.zip?st=2019-06-12T09%3A35%3A00Z&se=2019-07-14T09%3A35%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=6nzXZZpyKgiRlUcT1jNCR4DKkReSk9RfcsRxoU8VOxU%3D"
+    },
+    "xcCollectMsDeployPackageUrl": {
+      "value": "https://emeasitecore9storageblob.blob.core.windows.net/911/files/Sitecore%209.1.1%20rev.%20002459%20(Cloud)_xp1collection.scwdp.zip?st=2019-06-12T09%3A35%3A00Z&se=2019-07-14T09%3A35%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=6nzXZZpyKgiRlUcT1jNCR4DKkReSk9RfcsRxoU8VOxU%3D"
+    },
+    "xcSearchMsDeployPackageUrl": {
+      "value": "https://emeasitecore9storageblob.blob.core.windows.net/911/files/Sitecore%209.1.1%20rev.%20002459%20(Cloud)_xp1collectionsearch.scwdp.zip?st=2019-06-12T09%3A35%3A00Z&se=2019-07-14T09%3A35%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=6nzXZZpyKgiRlUcT1jNCR4DKkReSk9RfcsRxoU8VOxU%3D"
+    },
+    "cortexProcessingMsDeployPackageUrl": {
+      "value": "https://emeasitecore9storageblob.blob.core.windows.net/911/files/Sitecore%209.1.1%20rev.%20002459%20(Cloud)_xp1cortexprocessing.scwdp.zip"
+    },
+    "cortexReportingMsDeployPackageUrl": {
+      "value": "https://emeasitecore9storageblob.blob.core.windows.net/911/files/Sitecore%209.1.1%20rev.%20002459%20(Cloud)_xp1cortexreporting.scwdp.zip"
+    },
+    "maOpsMsDeployPackageUrl": {
+      "value": "https://emeasitecore9storageblob.blob.core.windows.net/911/files/Sitecore%209.1.1%20rev.%20002459%20(Cloud)_xp1marketingautomation.scwdp.zip?st=2019-06-12T09%3A35%3A00Z&se=2019-07-14T09%3A35%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=6nzXZZpyKgiRlUcT1jNCR4DKkReSk9RfcsRxoU8VOxU%3D"
+    },
+    "maRepMsDeployPackageUrl": {
+      "value": "https://emeasitecore9storageblob.blob.core.windows.net/911/files/Sitecore%209.1.1%20rev.%20002459%20(Cloud)_xp1marketingautomationreporting.scwdp.zip?st=2019-06-12T09%3A35%3A00Z&se=2019-07-14T09%3A35%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=6nzXZZpyKgiRlUcT1jNCR4DKkReSk9RfcsRxoU8VOxU%3D"
+    },
+    "authCertificateBlob": {
+      "value": ""
+    },
+    "authCertificatePassword": {
+      "value": ""
+    },
+    "machineLearningServerConnectionString": {
+      "value": ""
+    },
+    "machineLearningServerBlobEndpointCertificatePath": {
+      "value": ""
+    },
+    "machineLearningServerBlobEndpointCertificatePassword": {
+      "value": ""
+    },
+    "machineLearningServerTableEndpointCertificatePath": {
+      "value": ""
+    },
+    "machineLearningServerTableEndpointCertificatePassword": {
+      "value": ""
+    },
+    "machineLearningServerEndpointCertificationAuthorityCertificatePath": {
+      "value": ""
+    },
+    "templateLinkAccessToken": {
+      "value": "?st=2019-06-12T09%3A35%3A00Z&se=2019-07-14T09%3A35%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=6nzXZZpyKgiRlUcT1jNCR4DKkReSk9RfcsRxoU8VOxU%3D"
+    },
+    "templateLinkBase": {
+      "value": "https://emeasitecore9storageblob.blob.core.windows.net/911/arm911xp/"
+    }
+  }
+}
