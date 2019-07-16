@@ -3,7 +3,7 @@ param([string] $DeploymentId = "ibu-xp-911",
 
 $agentReleaseDirectory = $Env:AGENT_RELEASEDIRECTORY
 $releasePrimaryArtifactSourceAlias = $Env:RELEASE_PRIMARYARTIFACTSOURCEALIAS
-$rootPath = "$agentReleaseDirectory\$releasePrimaryArtifactSourceAlias"
+$rootPath = "$agentReleaseDirectory\$releasePrimaryArtifactSourceAlias\DevOps\Scripts"
 
 Write-Host "Root path is: $rootPath"
 
