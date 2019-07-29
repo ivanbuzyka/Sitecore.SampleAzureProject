@@ -1,4 +1,4 @@
-param([string] $DeploymentId = "ibu-devo-911"
+param([string] $DeploymentId = "ibu-devo-911",
       [string] $SubscriptinId = "575f0a7c-17d6-4c66-b207-f770cbd5bbd4")
 
 $agentReleaseDirectory = $Env:AGENT_RELEASEDIRECTORY
