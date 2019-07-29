@@ -1,6 +1,10 @@
 param([string] $DeploymentId = "ibu-devo-911",
-	  [string] $SubscriptinId = "575f0a7c-17d6-4c66-b207-f770cbd5bbd4",
-	  [string] $LicensePath = "")
+	  [string] $AzureSubscriptionId = "575f0a7c-17d6-4c66-b207-f770cbd5bbd4",
+	# These parameter should be passed by Secure Files
+	  [string] $LicensePath = "NO-LICENSE-FILE",
+	  [string] $Location = "westeurope",
+	  [string] $CertificateFilePath = "NO-CERTIFICATE-FILE",
+	  [string] $CertificatePassword = "NO-CERTIFICATE-PASSWORD")
 
 $agentReleaseDirectory = $Env:AGENT_RELEASEDIRECTORY
 $releasePrimaryArtifactSourceAlias = $Env:RELEASE_PRIMARYARTIFACTSOURCEALIAS
@@ -13,23 +17,19 @@ Write-Host "DeploymentId: $LicensePath"
 # Specify the parameters for the deployment 
 $ArmTemplateUrl = "https://emeasitecore9storageblob.blob.core.windows.net/911/arm911xp/azuredeploy.json?st=2019-06-12T09%3A35%3A00Z&se=2019-07-14T09%3A35%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=6nzXZZpyKgiRlUcT1jNCR4DKkReSk9RfcsRxoU8VOxU%3D"
 $ArmParametersPath = "$rootPath\azuredeploy.parameters.json"
-$licenseFilePath = "$rootPath\license.xml"
 
 # Specify the certificate file path and password if you want to deploy Sitecore 9.0 XP or XDB configurations
-$certificateFilePath = "$rootPath\EA1FAC1B9F10605EEA1DDC62E6A76C15E590051A.pfx1" 
-$certificatePassword = "secret"
+#$certificateFilePath = "$rootPath\EA1FAC1B9F10605EEA1DDC62E6A76C15E590051A.pfx1" 
 $certificateBlob = $null
 
-$Name = $DeploymentId #"ibu-xp-911"
-$location = "westeurope"
-$AzureSubscriptionId = $SubscriptinId
+$Name = $DeploymentId
 
 # read the contents of your Sitecore license file
-$licenseFileContent = Get-Content -Raw -Encoding UTF8 -Path $licenseFilePath | Out-String
+$licenseFileContent = Get-Content -Raw -Encoding UTF8 -Path $LicensePath | Out-String
 
 # read the contents of your authentication certificate
-if ($certificateFilePath) {
-  $certificateBlob = [System.Convert]::ToBase64String([System.IO.File]::ReadAllBytes($certificateFilePath))
+if ($CertificateFilePath) {
+  $certificateBlob = [System.Convert]::ToBase64String([System.IO.File]::ReadAllBytes($CertificateFilePath))
 }
 
 #region Create Params Object
@@ -117,13 +117,29 @@ if ($certificatePassword) {
 #		#endregion		
 #	}
 #	
-# 	Write-Host "Check if resource group already exists..."
-#	$notPresent = Get-AzureRmResourceGroup -Name $Name -ev notPresent -ea 0
-#	
-#	if (!$notPresent) 
-#	{
-#		New-AzureRmResourceGroup -Name $Name -Location $location
-#	}
+	#region Validate Resouce Group Name	
+
+	Write-Host "Validating Resource Group Name..."
+	if(!($Name -cmatch '^(?!.*--)[a-z0-9]{2}(|([a-z0-9\-]{0,37})[a-z0-9])$'))
+	{
+		Write-Error "Name should only contain lowercase letters, digits or dashes,
+					 dash cannot be used in the first two or final character,
+					 it cannot contain consecutive dashes and is limited between 2 and 40 characters in length!"
+		Break;		
+	}
+		
+	#endregion
+
+	Write-Host "Setting Azure RM context..."
+	Set-AzureRmContext -SubscriptionID $AzureSubscriptionId
+
+ 	Write-Host "Check if resource group already exists..."
+	$notPresent = Get-AzureRmResourceGroup -Name $Name -ev notPresent -ea 0
+	
+	if (!$notPresent) 
+	{
+		New-AzureRmResourceGroup -Name $Name -Location $Location
+	}
 	
 	# Write-Host "Starting ARM deployment..."
 	# New-AzureRmResourceGroupDeployment `
