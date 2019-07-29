@@ -75,6 +75,7 @@ $RECYCLE.BIN/
 .sass-cache
 
 # Visual Studio 2014 CTP
+.vs
 **/*.sln.ide
 /.vs/config
 /Sitecore Installation Package/ART-1.0.0.7.zip

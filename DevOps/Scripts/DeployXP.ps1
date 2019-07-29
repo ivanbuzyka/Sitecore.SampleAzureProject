@@ -1,4 +1,4 @@
-param([string] $DeploymentId = "ibu-xp-911", 
+param([string] $DeploymentId = "ibu-devo-911"
       [string] $SubscriptinId = "575f0a7c-17d6-4c66-b207-f770cbd5bbd4")
 
 $agentReleaseDirectory = $Env:AGENT_RELEASEDIRECTORY
@@ -6,6 +6,7 @@ $releasePrimaryArtifactSourceAlias = $Env:RELEASE_PRIMARYARTIFACTSOURCEALIAS
 $rootPath = "$agentReleaseDirectory\$releasePrimaryArtifactSourceAlias\DevOps\Scripts"
 
 Write-Host "Root path is: $rootPath"
+Write-Host "DeploymentId: $DeploymentId"
 
 # Specify the parameters for the deployment 
 $ArmTemplateUrl = "https://emeasitecore9storageblob.blob.core.windows.net/911/arm911xp/azuredeploy.json?st=2019-06-12T09%3A35%3A00Z&se=2019-07-14T09%3A35%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=6nzXZZpyKgiRlUcT1jNCR4DKkReSk9RfcsRxoU8VOxU%3D"
