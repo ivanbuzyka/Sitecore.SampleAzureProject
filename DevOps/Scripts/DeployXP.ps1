@@ -141,15 +141,15 @@ if ($certificatePassword) {
 		New-AzureRmResourceGroup -Name $Name -Location $Location
 	}
 	
-	# Write-Host "Starting ARM deployment..."
-	# New-AzureRmResourceGroupDeployment `
-	# 		-Name $Name `
-	# 		-ResourceGroupName $Name `
-	# 		-TemplateUri $ArmTemplateUrl `
-	# 		-TemplateParameterObject $additionalParams `
-	# 		# -DeploymentDebugLogLevel All -Debug -Verbose
-			
-	# Write-Host "Deployment Complete."
+	Write-Host "Starting ARM deployment..."
+	New-AzureRmResourceGroupDeployment `
+			-Name $Name `
+			-ResourceGroupName $Name `
+			-TemplateUri $ArmTemplateUrl `
+			-TemplateParameterObject $additionalParams `
+			# -DeploymentDebugLogLevel All -Debug -Verbose
+	
+	Write-Host "Deployment Complete."
 #}
 #catch 
 #{
