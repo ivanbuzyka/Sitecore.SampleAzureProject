@@ -15,7 +15,7 @@ Write-Host "DeploymentId: $DeploymentId"
 Write-Host "DeploymentId: $LicensePath"
 
 # Specify the parameters for the deployment 
-$ArmTemplateUrl = "https://emeasitecore9storageblob.blob.core.windows.net/911/arm911xp/azuredeploy.json?st=2019-06-12T09%3A35%3A00Z&se=2019-07-14T09%3A35%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=6nzXZZpyKgiRlUcT1jNCR4DKkReSk9RfcsRxoU8VOxU%3D"
+$ArmTemplateUrl = "https://emeasitecore9storageblob.blob.core.windows.net/911/arm911xp/azuredeploy.json?st=2019-07-29T14%3A30%3A00Z&se=2020-10-16T14%3A30%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=o5N0eIAOL4DVfDyMzkko162Xq6TQku4mA3AMqmb3ZTE%3D"
 $ArmParametersPath = "$rootPath\azuredeploy.parameters.json"
 
 # Specify the certificate file path and password if you want to deploy Sitecore 9.0 XP or XDB configurations
