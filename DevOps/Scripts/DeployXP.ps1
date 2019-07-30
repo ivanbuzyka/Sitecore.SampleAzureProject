@@ -49,6 +49,9 @@ foreach($p in $params | Get-Member -MemberType *Property)
 
 $additionalParams.Set_Item('licenseXml',$licenseFileContent)
 $additionalParams.Set_Item('deploymentId',$Name)
+$additionalParams.Set_Item('location',$Location)
+$additionalParams.Set_Item('location',$Location)
+$additionalParams.Set_Item('applicationInsightsLocation',$Location)
 
 # Inject Certificate Blob and Password into the parameters
 if ($certificateBlob) {
