@@ -83,7 +83,7 @@ New-AzureRmResourceGroupDeployment `
 		-ResourceGroupName $Name `
 		-TemplateUri $ArmTemplateUrl `
 		-TemplateParameterObject $additionalParams `
-		#-AsJob
+		-AsJob
 		# -DeploymentDebugLogLevel All -Debug -Verbose
 
 Write-Host "Deployment Complete."
