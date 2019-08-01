@@ -9,7 +9,7 @@
       "value": ""
     },
     "sitecoreAdminPassword": {
-      "value": "Sitecore12345"
+      "value": "Sitecore12345#!"
     },
     "licenseXml": {
       "value": ""
@@ -21,7 +21,7 @@
       "value": "sclogin"
     },
     "sqlServerPassword": {
-      "value": "Sitecore12345!"
+      "value": "Sitecore12345#!"
     },
     "siMsDeployPackageUrl": {
       "value": "https://emeasitecore9storageblob.blob.core.windows.net/911/files/Sitecore.IdentityServer.2.0.1-r00166.scwdp.zip?st=2019-07-29T14%3A30%3A00Z&se=2020-10-16T14%3A30%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=o5N0eIAOL4DVfDyMzkko162Xq6TQku4mA3AMqmb3ZTE%3D"
