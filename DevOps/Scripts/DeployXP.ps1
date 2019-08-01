@@ -59,7 +59,7 @@ if ($certificatePassword) {
 
 #region Validate Resouce Group Name	
 Write-Host "Validating Resource Group Name..."
-if(!($Name -cmatch '^(?!.*--)[a-z0-9]{2}(|([a-z0-9\-]{0,37})[a-z0-9])$'))
+if(!($ResourceGroupName -cmatch '^(?!.*--)[a-z0-9]{2}(|([a-z0-9\-]{0,37})[a-z0-9])$'))
 {
 	Write-Error "Name should only contain lowercase letters, digits or dashes,
 				 dash cannot be used in the first two or final character,
@@ -71,11 +71,11 @@ if(!($Name -cmatch '^(?!.*--)[a-z0-9]{2}(|([a-z0-9\-]{0,37})[a-z0-9])$'))
 Write-Host "Setting Azure RM context..."
 Set-AzureRmContext -SubscriptionID $AzureSubscriptionId
 	Write-Host "Check if resource group already exists..."
-$notPresent = Get-AzureRmResourceGroup -Name $Name -ev notPresent -ea 0
+$notPresent = Get-AzureRmResourceGroup -Name $ResourceGroupName -ev notPresent -ea 0
 
 if (!$notPresent) 
 {
-	New-AzureRmResourceGroup -Name $Name -Location $Location
+	New-AzureRmResourceGroup -Name $ResourceGroupName -Location $Location
 }
 
 Write-Host "Starting ARM deployment..."
