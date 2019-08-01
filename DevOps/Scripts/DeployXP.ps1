@@ -1,4 +1,5 @@
 param([string] $DeploymentId = "ibu-devo-911",
+	  [string] $ResourceGroupName = "ibu-devo-911",
 	  [string] $AzureSubscriptionId = "575f0a7c-17d6-4c66-b207-f770cbd5bbd4",
 	  [string] $ArmTemplateUrl = "NO-TEMPLATE-URL",
 	# These parameter should be passed by Secure Files
@@ -12,7 +13,7 @@ $releasePrimaryArtifactSourceAlias = $Env:RELEASE_PRIMARYARTIFACTSOURCEALIAS
 $rootPath = "$agentReleaseDirectory\$releasePrimaryArtifactSourceAlias\DevOps\Scripts"
 
 # Specify the parameters for the deployment 
-#$ArmTemplateUrl = "https://emeasitecore9storageblob.blob.core.windows.net/911/arm911xp/azuredeploy.json?st=2019-07-29T14%3A30%3A00Z&se=2020-10-16T14%3A30%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=o5N0eIAOL4DVfDyMzkko162Xq6TQku4mA3AMqmb3ZTE%3D"
+#$ArmTemplateUrl = "https://emeasitecore9storageblob.blob.core.windows.net/911/arm911xpas/azuredeploy.json?st=2019-07-29T14%3A30%3A00Z&se=2020-10-16T14%3A30%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=o5N0eIAOL4DVfDyMzkko162Xq6TQku4mA3AMqmb3ZTE%3D"
 $ArmParametersPath = "$rootPath\azuredeploy.parameters.json"
 
 $certificateBlob = $null
@@ -80,7 +81,7 @@ if (!$notPresent)
 Write-Host "Starting ARM deployment..."
 New-AzureRmResourceGroupDeployment `
 		-Name $Name `
-		-ResourceGroupName $Name `
+		-ResourceGroupName $ResourceGroupName `
 		-TemplateUri $ArmTemplateUrl `
 		-TemplateParameterObject $additionalParams `
 		# -AsJob
