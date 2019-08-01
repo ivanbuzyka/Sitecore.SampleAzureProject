@@ -88,6 +88,9 @@
     },
     "templateLinkBase": {
       "value": "https://emeasitecore9storageblob.blob.core.windows.net/911/arm911xp/"
+    },
+    "environmentType": {
+      "value": "Production"
     }
   }
 }
