@@ -91,6 +91,9 @@
     },
     "environmentType": {
       "value": "Production"
+    },
+    "sitecoreSKU": {
+      "value": "Medium"
     }
   }
 }
