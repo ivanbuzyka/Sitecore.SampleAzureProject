@@ -480,7 +480,7 @@
     <Content Include="App_Config\Include\Unicorn\Unicorn.zSharedSecret.config.example" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App_Config\Include\Unicorn\Unicorn.UI.IdentityServer.config" />
+    <Content Include="App_Config\Include\Unicorn\Unicorn.UI.IdentityServer.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Config\Include\Unicorn\Unicorn.UI.DeployedContentEditorWarnings.config.disabled" />
