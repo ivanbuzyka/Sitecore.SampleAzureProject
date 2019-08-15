@@ -472,9 +472,7 @@
     <Compile Include="App_Start\RazorGeneratorMvcStart.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="App_Config\Include\Rainbow.config" />
   </ItemGroup>
@@ -527,6 +525,11 @@
     <Content Include="Views\Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\Unicorn\SitecoreAzureTest.Project.Sample\Content\SitecoreAzureTest.yml" />
+    <Content Include="App_Data\Unicorn\SitecoreAzureTest.Project.Sample\Layouts\SitecoreAzureTest.yml" />
+    <Content Include="App_Data\Unicorn\SitecoreAzureTest.Project.Sample\Layouts\SitecoreAzureTest\AzureTestLayout.yml" />
+    <Content Include="App_Data\Unicorn\SitecoreAzureTest.Project.Sample\Renderings\SitecoreAzureTest.yml" />
+    <Content Include="App_Data\Unicorn\SitecoreAzureTest.Project.Sample\Templates\SitecoreAzureTest.yml" />
     <None Include="web.config" />
     <None Include="App_Config\Include\SitecoreAzureTest\SitecoreAzureTest.Unicorn.config" />
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
