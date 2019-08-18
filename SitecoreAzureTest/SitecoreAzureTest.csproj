@@ -477,7 +477,7 @@
     <Content Include="App_Config\Include\Rainbow.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App_Config\Include\Unicorn\Unicorn.zSharedSecret.config" />
+    <Content Include="App_Config\Include\Unicorn\Unicorn.zSharedSecret.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Config\Include\Unicorn\Unicorn.UI.IdentityServer.config" />
