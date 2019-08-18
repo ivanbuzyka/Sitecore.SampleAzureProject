@@ -531,7 +531,7 @@
     <Content Include="App_Data\Unicorn\SitecoreAzureTest.Project.Sample\Renderings\SitecoreAzureTest.yml" />
     <Content Include="App_Data\Unicorn\SitecoreAzureTest.Project.Sample\Templates\SitecoreAzureTest.yml" />
     <None Include="web.config" />
-    <None Include="App_Config\Include\SitecoreAzureTest\SitecoreAzureTest.Unicorn.config" />
+    <Content Include="App_Config\Include\SitecoreAzureTest\SitecoreAzureTest.Unicorn.config" />
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
