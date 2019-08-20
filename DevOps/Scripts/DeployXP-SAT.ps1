@@ -8,7 +8,7 @@ param([string] $DeploymentId = "ibu-devo-911",
 	  [string] $CertificateFilePath = "NO-CERTIFICATE-FILE",
 	  [string] $CertificatePassword = "NO-CERTIFICATE-PASSWORD")
 
-Import-Module "C:\projects\DevOps\Sitecore.SampleAzureProject\DevOps\Tools\SAT-2.3.0\Sitecore.Cloud.Cmdlets.psm1"
+Import-Module $(System.DefaultWorkingDirectory)\_ivanbuzyka_Sitecore.SampleAzureProject\DevOps\Tools\SAT-2.3.0\Sitecore.Cloud.Cmdlets.psm1"
 
 $agentReleaseDirectory = $Env:AGENT_RELEASEDIRECTORY
 $releasePrimaryArtifactSourceAlias = $Env:RELEASE_PRIMARYARTIFACTSOURCEALIAS
