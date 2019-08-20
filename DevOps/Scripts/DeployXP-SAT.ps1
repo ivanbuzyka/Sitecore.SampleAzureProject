@@ -8,14 +8,15 @@ param([string] $DeploymentId = "ibu-devo-911",
 	  [string] $CertificateFilePath = "NO-CERTIFICATE-FILE",
 	  [string] $CertificatePassword = "NO-CERTIFICATE-PASSWORD")
 
-Import-Module $(System.DefaultWorkingDirectory)\_ivanbuzyka_Sitecore.SampleAzureProject\DevOps\Tools\SAT-2.3.0\Sitecore.Cloud.Cmdlets.psm1"
-
 $agentReleaseDirectory = $Env:AGENT_RELEASEDIRECTORY
 $releasePrimaryArtifactSourceAlias = $Env:RELEASE_PRIMARYARTIFACTSOURCEALIAS
 $rootPath = "$agentReleaseDirectory\$releasePrimaryArtifactSourceAlias\DevOps\Scripts"
+$toolsPath = "$agentReleaseDirectory\$releasePrimaryArtifactSourceAlias\DevOps\Tools"
 
 # Specify the parameters for the deployment 
 $ArmParametersPath = "$rootPath\azuredeploy.parameters.json"
+
+Import-Module "$toolsPath\SAT-2.3.0\Sitecore.Cloud.Cmdlets.psm1"
 
 $certificateBlob = $null
 
@@ -39,11 +40,6 @@ if ($certificatePassword) {
   $additionalParams.Set_Item('authCertificatePassword',$certificatePassword)
 }
 
-Write-Host "Setting Azure RM context..."
 Set-AzureRmContext -SubscriptionID $AzureSubscriptionId
 
-Write-Host "Starting ARM deployment..."
-
 Start-SitecoreAzureDeployment -location $Location -Name $ResourceGroupName -ArmTemplateUrl $ArmTemplateUrl -ArmParametersPath $ArmParametersPath -LicenseXmlPath $LicensePath -SetKeyValue $additionalParams
-
-Write-Host "Deployment Complete."
