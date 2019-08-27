@@ -1,0 +1,32 @@
+﻿---
+ID: "7b6887b2-fc6c-4fa9-9822-44a330325a10"
+Parent: "9223eab8-87d6-4179-87da-e9f032b611e5"
+Template: "dd22f1b3-bd87-4db2-9e7d-f7a496888d43"
+Path: /sitecore/system/Modules/PowerShell/Script Library/SPE/Samples/DevOps/Web API/RebuildAllIndexes
+DB: master
+SharedFields:
+- ID: "b1a94ff0-6897-47c0-9c51-aa6acb80b1f0"
+  Hint: Script
+  Value: |
+    if ($HttpContext){
+        $HttpContext.Response.ContentType = "application/json";
+    }
+    
+    $response = @{}
+    
+    $indexes = Get-SearchIndex
+    foreach ($index in $indexes)
+    {
+        Initialize-SearchIndex -Name $index.Name
+        $response.Add($index.Name, "rebuild started")
+    }
+    
+    $response | ConvertTo-Json
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20190827T125544Z
