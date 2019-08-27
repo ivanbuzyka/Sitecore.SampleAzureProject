@@ -916,14 +916,6 @@
       }
     },
     {
-      "type": "Microsoft.Web/sites/slots",
-      "name": "[concat(variables('cmWebAppNameTidy'), '/', 'pre-prod')]",
-      "apiVersion": "[variables('webApiVersion')]",
-      "location": "[parameters('location')]",
-      "properties": {},
-      "dependsOn": [ "[resourceId('Microsoft.Web/sites/', variables('cmWebAppNameTidy'))]" ]           
-    },
-    {
       "type": "Microsoft.Web/sites",
       "name": "[variables('cdWebAppNameTidy')]",
       "apiVersion": "[variables('webApiVersion')]",
@@ -946,14 +938,6 @@
         "provider": "[variables('sitecoreTags').provider]",
         "logicalName": "[variables('sitecoreTags').cd]"
       }
-    },
-    {
-      "type": "Microsoft.Web/sites/slots",
-      "name": "[concat(variables('cdWebAppNameTidy'), '/', 'pre-prod')]",
-      "apiVersion": "[variables('webApiVersion')]",
-      "location": "[parameters('location')]",
-      "properties": {},
-      "dependsOn": [ "[resourceId('Microsoft.Web/sites/', variables('cdWebAppNameTidy'))]" ]
     },
     {
       "type": "Microsoft.Web/sites",
