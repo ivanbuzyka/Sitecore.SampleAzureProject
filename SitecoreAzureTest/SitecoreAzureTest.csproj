@@ -533,6 +533,10 @@
     <None Include="App_Config\Include\Unicorn\zUnicorn.LocalDev.config" />
     <Content Include="App_Config\Include\zSPE\SitecoreAzureTest.SPE.config" />
     <Content Include="App_Config\Include\zSPE\SitecoreAzureTest.SPE.IdentityServer.config" />
+    <Content Include="App_Data\Unicorn\SitecoreAzureTest.Project.Sample\PSDevOpsScripts\DevOps.yml" />
+    <Content Include="App_Data\Unicorn\SitecoreAzureTest.Project.Sample\PSDevOpsScripts\DevOps\Web API.yml" />
+    <Content Include="App_Data\Unicorn\SitecoreAzureTest.Project.Sample\PSDevOpsScripts\DevOps\Web API\PublishAllSmart.yml" />
+    <Content Include="App_Data\Unicorn\SitecoreAzureTest.Project.Sample\PSDevOpsScripts\DevOps\Web API\RebuildAllIndexes.yml" />
     <None Include="web.config" />
     <Content Include="App_Config\Include\SitecoreAzureTest\SitecoreAzureTest.Unicorn.config" />
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
