@@ -1,0 +1,14 @@
+﻿---
+ID: "9223eab8-87d6-4179-87da-e9f032b611e5"
+Parent: "a98e25e8-9861-451b-ba27-9e8847478aa9"
+Template: "ab154d3d-1126-4ab4-ac21-8b86e6bd70ea"
+Path: /sitecore/system/Modules/PowerShell/Script Library/SPE/Samples/DevOps/Web API
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20190827T110627Z
