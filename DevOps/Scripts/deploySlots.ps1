@@ -6,9 +6,9 @@ param(	[string] $WebAppName = "ibu1-cm",
 	
 	Write-Host "Copying Production webap app to $SlotName slot"
 	Write-Host "Removing $SlotName if it exists"
-	Remove-AzWebAppSlot -ResourceGroupName $ResourceGroupName -Name $WebAppName -Slot $SlotName -ErrorAction SilentlyContinue -Force
+	Remove-AzureRMWebAppSlot -ResourceGroupName $ResourceGroupName -Name $WebAppName -Slot $SlotName -ErrorAction SilentlyContinue -Force
 
-	$ProdSlot = Get-AzWebAppSlot -ResourceGroupName $ResourceGroupName -Name $WebAppName -Slot Production
-	New-AzWebAppSlot -ResourceGroupName $ResourceGroupName -Name $WebAppName -Slot $SlotName -AppServicePlan $AppServicePlan -SourceWebApp $ProdSlot
+	$ProdSlot = Get-AzureRMWebAppSlot -ResourceGroupName $ResourceGroupName -Name $WebAppName -Slot Production
+	New-AzureRMWebAppSlot -ResourceGroupName $ResourceGroupName -Name $WebAppName -Slot $SlotName -AppServicePlan $AppServicePlan -SourceWebApp $ProdSlot
 
 	Write-Host "Copying complete"

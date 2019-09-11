@@ -1,10 +1,11 @@
-param([string] $WebAppNamePrefix = "ibu1",
+param([string] $WebAppName = "ibu1-cm",
 	  [string] $ResourceGroupName = "ibu1",	  
-	  [string] $LocalenvDefine = "production")
+	  [string] $LocalenvDefine = "development",
+	  [string] $SlotName = "pre-prod")
 
-	  $webAppName = "$WebAppNamePrefix-cm"
+	  $settingName = "localenv:define"	  
 
-	  $webApp = Get-AzureRmWebApp -ResourceGroupName $ResourceGroupName -Name $webAppName
+	  $webApp = Get-AzureRmWebApp -ResourceGroupName $ResourceGroupName -Name $WebAppName
 	  
 	  $appSettings = $webApp.SiteConfig.AppSettings
 	  
@@ -13,7 +14,8 @@ param([string] $WebAppNamePrefix = "ibu1",
 	  $newAppSettings[$item.Name] = $item.Value
 	  }
 	  
-	  $newAppSettings['localenv:define'] = $LocalenvDefine
+	  $newAppSettings[$settingName] = $LocalenvDefine
 	  
-	  Set-AzureRmWebApp -AppSettings $newAppSettings -Name $webAppName -ResourceGroupName $ResourceGroupName
+	  Set-AzureRmWebAppSlot -AppSettings $newAppSettings -Name $WebAppName -Slot $SlotName -ResourceGroupName $ResourceGroupName
+	  Set-AzureRmWebAppSlotConfigName -ResourceGroupName $ResourceGroupName -Name $WebAppName -AppSettingNames @($settingName)
 	  
