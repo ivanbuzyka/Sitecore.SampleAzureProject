@@ -17,7 +17,13 @@ param(	[string] $ResourceGroupName = "ibu1",
 		$hashItems[$keyValuePair.Name] = $setting
 	}
 
-	$hashItems[$ConnectionStringName] = @{Type="SQLAzure".ToString();Value="$ConnectionStringValue"}
+	Write-Host "Checkpoint 1: "
+
+	Write-Host "$ConnectionStringValue"
+
+	$hashItems[$ConnectionStringName] = @{Type="SQLAzure";Value="$ConnectionStringValue"}
+
+	Write-Host "Checkpoint 2"
 	  
 	Set-AzureRmWebAppSlot -ConnectionStrings $hashItems -Name $WebAppName -Slot $SlotName -ResourceGroupName $ResourceGroupName
 	#Set-AzureRmWebAppSlotConfigName -ResourceGroupName $ResourceGroupName -Name $WebAppName -AppSettingNames @($settingName)
