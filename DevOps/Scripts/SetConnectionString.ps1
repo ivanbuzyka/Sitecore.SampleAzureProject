@@ -1,7 +1,6 @@
 param(	[string] $ResourceGroupName = "ibu1",	
 	[string] $WebAppName = "ibu1-cm",
 	[string] $SlotName = "test",
-	[string] $SqlDbCopyName = "ibu1-master-db",
 	[string] $ConnectionStringName = "master",
 	[string] $ConnectionStringValue = "connstringvalue"
     )
@@ -18,7 +17,7 @@ param(	[string] $ResourceGroupName = "ibu1",
 		$hashItems[$keyValuePair.Name] = $setting
 	}
 
-	$hashItems[$ConnectionStringName] = @{Type="SQLAzure".ToString();Value=$ConnectionStringValue.ToString()}
+	$hashItems[$ConnectionStringName] = @{Type="SQLAzure".ToString();Value="$ConnectionStringValue"}
 	  
 	Set-AzureRmWebAppSlot -ConnectionStrings $hashItems -Name $WebAppName -Slot $SlotName -ResourceGroupName $ResourceGroupName
 	#Set-AzureRmWebAppSlotConfigName -ResourceGroupName $ResourceGroupName -Name $WebAppName -AppSettingNames @($settingName)
