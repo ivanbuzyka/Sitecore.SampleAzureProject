@@ -14,7 +14,7 @@ param(	[string] $ResourceGroupName = "ibu1",
 
 	Write-Host "Composed connection string: $composedConnectionString"
 
-	$webApp = Get-AzureRmWebApp -ResourceGroupName $ResourceGroupName -Name $WebAppName
+	$webApp = Get-AzureRmWebAppSlot -ResourceGroupName $ResourceGroupName -Name $WebAppName -Slot $SlotName
 	
 	$connStringsList = $webApp.SiteConfig.ConnectionStrings	
 	$hashItems = New-Object System.Collections.HashTable
@@ -24,9 +24,8 @@ param(	[string] $ResourceGroupName = "ibu1",
 		$hashItems[$keyValuePair.Name] = $setting
 	}
 
-	#ToDo: update script, build connecrtion string here inline, get password etc. by parameters		
 	$hashItems[$ConnectionStringName] = @{Type="SQLAzure";Value=$composedConnectionString}
-
+	
 	Write-Host "ConnectionStrings list:"
 	$hashItems | Format-Table -AutoSize
 
