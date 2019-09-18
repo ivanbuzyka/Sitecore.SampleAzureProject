@@ -1,11 +1,18 @@
 param(	[string] $ResourceGroupName = "ibu1",	
 	[string] $WebAppName = "ibu1-cm",
 	[string] $SlotName = "test",
-	[string] $ConnectionStringName = "master",
-	[string] $ConnectionStringValue = "connstringvalue"
+	[string] $ConnectionStringName = "master",	
+	[string] $SqlServerName = "ibu1-sql.database.windows.net",
+	[string] $DbName = "ibu1-master-db",
+	[string] $DbUserName = "masteruser",
+	[string] $DbPassword = "password"
     )
 	
 	Write-Host "Setting connection string for "
+
+	$composedConnectionString = "Encrypt=True;TrustServerCertificate=False;Data Source=$SqlServerName,1433;Initial Catalog=$DbName;User Id=$DbUserName;Password=$DbPassword;"
+
+	Write-Host "Composed connection string: $composedConnectionString"
 
 	$webApp = Get-AzureRmWebApp -ResourceGroupName $ResourceGroupName -Name $WebAppName
 	
@@ -17,13 +24,8 @@ param(	[string] $ResourceGroupName = "ibu1",
 		$hashItems[$keyValuePair.Name] = $setting
 	}
 
-	Write-Host "Checkpoint 1: "
+	#ToDo: update script, build connecrtion string here inline, get password etc. by parameters		
+	$hashItems[$ConnectionStringName] = @{Type="SQLAzure";Value=$composedConnectionString}
 
-	Write-Host "$ConnectionStringValue"
-
-	$hashItems[$ConnectionStringName] = @{Type="SQLAzure";Value="$ConnectionStringValue"}
-
-	Write-Host "Checkpoint 2"
-	  
 	Set-AzureRmWebAppSlot -ConnectionStrings $hashItems -Name $WebAppName -Slot $SlotName -ResourceGroupName $ResourceGroupName
 	#Set-AzureRmWebAppSlotConfigName -ResourceGroupName $ResourceGroupName -Name $WebAppName -AppSettingNames @($settingName)
