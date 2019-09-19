@@ -537,6 +537,16 @@
     <Content Include="App_Data\Unicorn\SitecoreAzureTest.Project.Sample\PSDevOpsScripts\DevOps\Web API.yml" />
     <Content Include="App_Data\Unicorn\SitecoreAzureTest.Project.Sample\PSDevOpsScripts\DevOps\Web API\PublishAllSmart.yml" />
     <Content Include="App_Data\Unicorn\SitecoreAzureTest.Project.Sample\PSDevOpsScripts\DevOps\Web API\RebuildAllIndexes.yml" />
+    <Content Include="App_Data\Unicorn\SitecoreAzureTest.Project.Sample\MediaLibrary\SitecoreAzureTest.yml" />
+    <Content Include="App_Data\Unicorn\SitecoreAzureTest.Project.Sample\MediaLibrary\SitecoreAzureTest\IMG_2440.yml" />
+    <Content Include="App_Data\Unicorn\SitecoreAzureTest.Project.Sample\Content\SitecoreAzureTest\bye.yml" />
+    <Content Include="App_Data\Unicorn\SitecoreAzureTest.Project.Sample\Content\SitecoreAzureTest\welcome.yml" />
+    <Content Include="App_Data\Unicorn\SitecoreAzureTest.Project.Sample\Templates\SitecoreAzureTest\Azure Page.yml" />
+    <Content Include="App_Data\Unicorn\SitecoreAzureTest.Project.Sample\Templates\SitecoreAzureTest\Azure Page\Data.yml" />
+    <Content Include="App_Data\Unicorn\SitecoreAzureTest.Project.Sample\Templates\SitecoreAzureTest\Azure Page\Data\Description.yml" />
+    <Content Include="App_Data\Unicorn\SitecoreAzureTest.Project.Sample\Templates\SitecoreAzureTest\Azure Page\Data\Image.yml" />
+    <Content Include="App_Data\Unicorn\SitecoreAzureTest.Project.Sample\Templates\SitecoreAzureTest\Azure Page\Data\Title.yml" />
+    <Content Include="App_Data\Unicorn\SitecoreAzureTest.Project.Sample\Templates\SitecoreAzureTest\Azure Page\__Standard Values.yml" />
     <None Include="web.config" />
     <Content Include="App_Config\Include\SitecoreAzureTest\SitecoreAzureTest.Unicorn.config" />
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
