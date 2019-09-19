@@ -1,0 +1,24 @@
+﻿---
+ID: "de965d33-ce30-4acf-ac20-4ecda6eb6f83"
+Parent: "d085452f-fea6-4e28-85c7-ccb2add30977"
+Template: "3c66c300-c6e5-480b-8640-81337360e810"
+Path: /sitecore/content/Home/SitecoreAzureTest/welcome
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20190919T090848Z
+    - ID: "4b3763d9-d976-4bf4-a21e-fa43adfbe96e"
+      Hint: Title
+      Value: "Welcome to newly deployed feature!"
+    - ID: "80e98898-5ab4-44ed-8339-2c6e63b1cade"
+      Hint: Image
+      Value: |
+        <image mediaid="{52141B59-2A20-4B5F-A42B-8ECC3FDF5FC8}" alt="" height="375" width="500" hspace="" vspace="" />
+    - ID: "ac867bb8-3939-472f-ad6d-d6a2cbbc1772"
+      Hint: Description
+      Value: "New feature is here!"

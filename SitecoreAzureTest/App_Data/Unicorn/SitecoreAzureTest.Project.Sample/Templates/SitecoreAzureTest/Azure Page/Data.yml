@@ -1,0 +1,14 @@
+﻿---
+ID: "e7cb52e1-72f4-4ef1-9048-251823d5075d"
+Parent: "3c66c300-c6e5-480b-8640-81337360e810"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Project/SitecoreAzureTest/Azure Page/Data
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20190919T090727Z

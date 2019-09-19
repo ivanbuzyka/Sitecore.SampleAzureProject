@@ -1,0 +1,21 @@
+﻿---
+ID: "80e98898-5ab4-44ed-8339-2c6e63b1cade"
+Parent: "e7cb52e1-72f4-4ef1-9048-251823d5075d"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/SitecoreAzureTest/Azure Page/Data/Image
+DB: master
+SharedFields:
+- ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
+  Hint: Type
+  Value: Image
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 300
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20190919T090727Z

@@ -14,7 +14,9 @@
   <body>
     <h1>@Html.Sitecore().Field("title")</h1>
     <div>
-      @Html.Sitecore().Placeholder("main")
+        <div>@Html.Sitecore().Field("Description")</div>
+        <div>@Html.Sitecore().Field("Image", new { mw=500 })</div>
+        @Html.Sitecore().Placeholder("main")
     </div>
   </body>
 </html>
