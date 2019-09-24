@@ -876,20 +876,7 @@
       "tags": {
         "provider": "[variables('sitecoreTags').provider]",
         "logicalName": "[variables('sitecoreTags').si]"
-      },
-      "resources": [
-        {
-          "type": "siteextensions",
-          "name": "AspNetCoreRuntime",
-          "apiVersion": "[variables('siteExtensionsVersion')]",
-          "location": "[resourceGroup().location]",
-          "properties": {
-          },
-          "dependsOn": [
-            "[resourceId('Microsoft.Web/sites', variables('siWebAppNameTidy'))]"
-          ]
-        }
-      ]
+      }
     },
     {
       "type": "Microsoft.Web/sites",
